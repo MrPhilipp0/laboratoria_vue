@@ -1,5 +1,9 @@
 <template>
-  <img :src="image" class="image" alt="Main image" />
+  <img
+    :src="image"
+    class="image"
+    alt="Main image"
+  />
 </template>
 
 <script>
@@ -8,7 +12,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: () => "sss",
+      default: () => "",
     },
   },
 };
@@ -17,6 +21,6 @@ export default {
 <style scoped>
 .image {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
 }
 </style>

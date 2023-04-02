@@ -1,12 +1,16 @@
 <template>
   <div class="nav">
-    <span><NuxtLink to="/">Home</NuxtLink></span>
-    <span><NuxtLink to="/details">Details</NuxtLink></span>
+    <span>
+      <NuxtLink to="/">Home</NuxtLink>
+    </span>
+    <span>
+      <NuxtLink to="/details">Details</NuxtLink>
+    </span>
   </div>
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>
 
 <style>
@@ -20,7 +24,12 @@ export default {};
   border-radius: 4px;
 }
 
-.nav > span {
+.nav>span {
   font-size: 24px;
+}
+
+.nav>span>a {
+  text-decoration: none;
+  color: rgb(15, 2, 24);
 }
 </style>
