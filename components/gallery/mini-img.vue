@@ -1,10 +1,10 @@
 <template>
-  <img :src="image" class="image" alt="Main image" />
+  <img :src="image" class="image" alt="Mini image" />
 </template>
 
 <script>
 export default {
-  name: "MainImage",
+  name: "MiniImage",
   props: {
     image: {
       type: String,
@@ -17,6 +17,6 @@ export default {
 <style scoped>
 .image {
   width: 100%;
-  max-width: 400px;
+  max-width: 100px;
 }
 </style>

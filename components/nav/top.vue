@@ -6,14 +6,17 @@
     <span>
       <NuxtLink to="/details">Details</NuxtLink>
     </span>
+    <span>
+      <NuxtLink to="/nasa">NASA</NuxtLink>
+    </span>
   </div>
 </template>
 
 <script>
-  export default {};
+export default {};
 </script>
 
-<style>
+<style scoped>
 .nav {
   display: flex;
   align-items: center;
@@ -24,11 +27,11 @@
   border-radius: 4px;
 }
 
-.nav>span {
+.nav > span {
   font-size: 24px;
 }
 
-.nav>span>a {
+.nav > span > a {
   text-decoration: none;
   color: rgb(15, 2, 24);
 }

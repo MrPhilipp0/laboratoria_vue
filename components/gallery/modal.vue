@@ -1,23 +1,8 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" v-if="image">
     <div class="modal">
-      <button
-        class="close-modal"
-        @click="closeModal"
-      >
-        X
-      </button>
-      <img
-        :src="image"
-        class="image"
-        alt="Main image"
-      />
-
-      <div class="list">
-        <div>w</div>
-        <div>ed</div>
-        <div>q</div>
-      </div>
+      <button class="close-modal" @click="closeModal">X</button>
+      <img :src="image" class="image" alt="Main image" />
     </div>
   </div>
 </template>
@@ -33,9 +18,14 @@ export default {
   },
   methods: {
     closeModal() {
-      this.$emit('closeModal');
-    }
-  }
+      this.$emit("closeModal");
+      this.image = "";
+    },
+  },
+
+  created() {
+    this.$nuxt.$on("showModal", (href) => (this.image = href));
+  },
 };
 </script>
 
@@ -50,7 +40,7 @@ export default {
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal {
@@ -82,5 +72,6 @@ export default {
 .image {
   width: auto;
   max-height: 350px;
+  max-width: 425px;
 }
 </style>

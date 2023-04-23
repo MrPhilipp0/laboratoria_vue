@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TopNav />
     <div>
       <span>{{ onePerson.name }}</span>
       <span>{{ onePerson.salary }}</span>
@@ -15,16 +14,14 @@
 </template>
 
 <script>
-import TopNav from "../components/nav/TopNav.vue";
-import Customer from "../components/models/customer"
+import Customer from "../components/models/customer";
 export default {
   name: "IndexPage",
-  components: { TopNav },
   data() {
     return {
       onePerson: Customer,
       secondPerson: Customer,
-    }
+    };
   },
   created() {
     this.person();
@@ -35,10 +32,10 @@ export default {
       this.secondPerson = {
         name: "Marian",
         salary: 323232,
-        age: 102
-      }
-    }
-  }
+        age: 102,
+      };
+    },
+  },
 };
 </script>
 
