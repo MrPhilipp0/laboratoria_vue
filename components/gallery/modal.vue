@@ -24,14 +24,17 @@ export default {
   },
 
   created() {
-    this.$nuxt.$on("showModal", (href) => (this.image = href));
+    this.$nuxt.$on("showModal", (href) => {
+      this.image = href;
+      // window.scrollTo(0, 0);
+    });
   },
 };
 </script>
 
 <style scoped>
 .wrapper {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
