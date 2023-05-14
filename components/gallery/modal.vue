@@ -24,10 +24,7 @@ export default {
   },
 
   created() {
-    this.$nuxt.$on("showModal", (href) => {
-      this.image = href;
-      // window.scrollTo(0, 0);
-    });
+    this.$nuxt.$on("showModal", (href) => (this.image = href));
   },
 };
 </script>
