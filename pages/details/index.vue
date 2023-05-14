@@ -5,12 +5,14 @@
       v-if="modalIsActive"
       @closeModal="showModal"
     />
-    <div>
-      <button @click="previousMainImage">left</button>
+    <div class="wrapper">
+      <button @click="previousMainImage" class="change-image">
+        {{ "🡠" }}
+      </button>
       <div class="show-modal" @click="showModal">
         <MainImage class="main-image" :image="viewedImage.src" />
       </div>
-      <button @click="nextMainImage">rigth</button>
+      <button @click="nextMainImage" class="change-image">{{ "🡢" }}</button>
     </div>
     <div class="mini-image-wrapper">
       <div
@@ -79,6 +81,18 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.change-image {
+  font-size: 28px;
+}
+
 .main-image {
   display: block;
   margin: 16px auto;
